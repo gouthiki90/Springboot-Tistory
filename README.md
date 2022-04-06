@@ -18,3 +18,6 @@ CREATE DATABASE greendb;
 
 GRANT ALL PRIVILEGES ON greendb.* TO 'green'@'%';
 ```
+
+### 4. 댓글
+- https://livere.com/
