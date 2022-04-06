@@ -14,7 +14,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         
         // super.configure(http); 부모를 가르키는 메서드를 호출하지 않는다. 시큐리티 비활성화
-        http.csrf().disable();
+        http.csrf().disable(); // csrf 공격 방어를 해제하기 위한 코드
         http.authorizeRequests()
             .antMatchers("/s/**").authenticated() // /s/**에만 시큐리티를 적용하고
             .anyRequest().permitAll() // 그게 아닌 리퀘스트에는 제외시킨다.
