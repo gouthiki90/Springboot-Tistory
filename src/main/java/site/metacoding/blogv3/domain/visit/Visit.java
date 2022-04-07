@@ -2,6 +2,7 @@ package site.metacoding.blogv3.domain.visit;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -30,7 +31,8 @@ public class Visit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer totalCount;
+    @Column(nullable = false)
+    private Long totalCount;
 
     @JoinColumn(name = "userId")
     @ManyToOne
