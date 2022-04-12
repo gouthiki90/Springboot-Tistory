@@ -20,6 +20,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .anyRequest().permitAll() // 그게 아닌 리퀘스트에는 제외시킨다.
             .and()
             .formLogin() // 폼태그로 로그인할 때
+            // .usernameParameter("user") 이렇게 변경 가능
+            // .passwordParameter("pwd")
             .loginPage("/login-form") // 해당 페이지로 요청하도록 한다.
             .defaultSuccessUrl("/"); // 요청에 성공하면 /로 가게끔 한다.
     }
