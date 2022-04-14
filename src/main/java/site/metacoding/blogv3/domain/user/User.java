@@ -31,6 +31,8 @@ public class User {
     @Column(length = 20, nullable = false, unique = true)
     private String username;
 
+    // 1234 -> SHA256(해시 알고리즘) 사용해서 암호화 -> AB4524GDUF3AE -> 이렇게 안하면 시큐리티가 거부
+    @Column(length = 20, nullable = false)
     private String passowrd;
 
     @Column(length = 60, nullable = false)

@@ -23,6 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             // .usernameParameter("user") 이렇게 변경 가능
             // .passwordParameter("pwd")
             .loginPage("/login-form") // 해당 페이지로 요청하도록 한다.
+            .loginProcessingUrl("/login") // /login 프로세스를 타게 된다.
             .defaultSuccessUrl("/"); // 요청에 성공하면 /로 가게끔 한다.
     }
 }
